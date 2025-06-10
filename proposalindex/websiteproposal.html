@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Index</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            color: #2d6a4f; /* Green text color */
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 120px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #2d6a4f;
+            font-weight: bold;
+        }
+
+        header nav {
+            margin-top: 1rem;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #2d6a4f;
+            margin: 0 1rem;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        header nav a:hover {
+            color: #1a4d3f;
+        }
+
+        .container {
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+        }
+
+        .proposal-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            height: 300px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .proposal-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .proposal-box i {
+            font-size: 3rem;
+            color: #2d6a4f;
+            margin-bottom: 1rem;
+        }
+
+        .proposal-box h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #2d6a4f;
+        }
+
+        .proposal-box a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            background-color: #2d6a4f;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .proposal-box a:hover {
+            background-color: #1a4d3f;
+        }
+
+        footer {
+            background-color: #2d6a4f;
+            padding: 1rem 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+        
+        .back-to-home {
+    position: absolute;
+    top: 50px; /* Adjust the distance from the top */
+    right: 20px; /* Adjust the distance from the right */
+    padding: 10px 20px;
+    background-color: #2d6a4f; /* Green color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-home:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://www.thextruder.com/wp-content/uploads/2023/07/dw.png.webp" alt="TheXtruder Logo">
+    <h1>Proposal Index</h1>
+    <nav>
+        <a href="businesswebdevelopment.html">Website</a>
+        <a href="#business-website">Business Website</a>
+        <a href="#ecommerce-website">E-commerce Website</a>
+        <a href="#catalog-website">Catalog Website</a>
+        <a href="htmlwebsite.html">HTML5 Website</a>
+        <a href="#mernstack-website">MERN Stack Website</a>
+        <a href="#php-website">PHP Website</a>
+        <a href="#wix-website">Wix Website</a>
+    </nav>
+    <a href="https://thextruder.com/proposalindex/" class="back-to-home">Back to Home</a>
+</header>
+
+<div class="container">
+    <!-- Business Website -->
+    <div class="proposal-box" id="business-website">
+        <i class="fas fa-building"></i>
+        <h3>Business Website Proposal</h3>
+        <a href="businesswebdevelopment.html">View Proposal</a>
+    </div>
+
+    <!-- E-commerce Website -->
+    <div class="proposal-box" id="ecommerce-website">
+        <i class="fas fa-shopping-cart"></i>
+        <h3>E-commerce Website Proposal</h3>
+        <a href="ecomerce.html">View Proposal</a>
+    </div>
+
+    <!-- Catalog Website -->
+    <div class="proposal-box" id="catalog-website">
+        <i class="fas fa-book"></i>
+        <h3>Catalog Website Proposal</h3>
+        <a href="#">View Proposal</a>
+    </div>
+
+    <!-- HTML5 Website -->
+    <div class="proposal-box" id="html5-website">
+        <i class="fas fa-code"></i>
+        <h3>HTML5 Website Proposal</h3>
+        <a href="htmlwebsite.html">View Proposal</a>
+    </div>
+
+    <!-- MERN Stack Website -->
+    <div class="proposal-box" id="mernstack-website">
+        <i class="fas fa-cogs"></i>
+        <h3>MERN Stack Website Proposal</h3>
+        <a href="#">View Proposal</a>
+    </div>
+
+    <!-- PHP Website -->
+    <div class="proposal-box" id="php-website">
+        <i class="fas fa-code-branch"></i>
+        <h3>PHP Website Proposal</h3>
+        <a href="#">View Proposal</a>
+    </div>
+
+    <!-- Wix Website -->
+    <div class="proposal-box" id="wix-website">
+        <i class="fas fa-palette"></i>
+        <h3>Wix Website Proposal</h3>
+        <a href="#">View Proposal</a>
+    </div>
+</div>
+
+<!-- Placeholder sections for proposals -->
+<section id="business-website-section" style="display:none;">
+    <h3>Business Website Proposal</h3>
+    <p>Details for the business website proposal will be listed here.</p>
+</section>
+
+<section id="ecommerce-website-section" style="display:none;">
+    <h3>E-commerce Website Proposal</h3>
+    <p>Details for the e-commerce website proposal will be listed here.</p>
+</section>
+
+<section id="catalog-website-section" style="display:none;">
+    <h3>Catalog Website Proposal</h3>
+    <p>Details for the catalog website proposal will be listed here.</p>
+</section>
+
+<section id="html5-website-section" style="display:none;">
+    <h3>HTML5 Website Proposal</h3>
+    <p>Details for the HTML5 website proposal will be listed here.</p>
+</section>
+
+<section id="mernstack-website-section" style="display:none;">
+    <h3>MERN Stack Website Proposal</h3>
+    <p>Details for the MERN Stack website proposal will be listed here.</p>
+</section>
+
+<section id="php-website-section" style="display:none;">
+    <h3>PHP Website Proposal</h3>
+    <p>Details for the PHP website proposal will be listed here.</p>
+</section>
+
+<section id="wix-website-section" style="display:none;">
+    <h3>Wix Website Proposal</h3>
+    <p>Details for the Wix website proposal will be listed here.</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 TheXtruder. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

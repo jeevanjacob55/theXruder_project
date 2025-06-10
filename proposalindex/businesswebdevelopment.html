@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Packages</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+         header {
+            background-color: #fff;
+            color: #333;
+            padding: 1rem 0;
+            text-align: center;
+            border-bottom: 2px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            max-width: 100px;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            margin-top: 1rem;
+            background-color: #2d6a4f;
+            padding: 0.5rem 0;
+        }
+
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2rem;
+        }
+
+        h2 {
+            color: #2d6a4f;
+            margin-bottom: 1rem;
+        }
+
+        .table-container {
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #2d6a4f;
+            color: #fff;
+        }
+
+        .note {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* Green Theme Section */
+        .section-header {
+            background-color: #2d6a4f;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Hosting Package Box */
+        .hosting-package {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .package-box {
+            flex: 1;
+            background-color: #e9f7f0;
+            border: 1px solid #2d6a4f;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .package-box h3 {
+            text-align: center;
+            color: #2d6a4f;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .package-box ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .package-box li {
+            margin-bottom: 0.5rem;
+        }
+
+        .package-box .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2d6a4f;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .package-box .renewal {
+            text-align: center;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .faq-container {
+            padding: 2rem;
+        }
+        .faq-container h2 {
+            text-align: center;
+            color: #2d6a4f;
+            margin-bottom: 1rem;
+        }
+        .faq {
+            background-color: #ffffff;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .faq h3 {
+            cursor: pointer;
+            margin: 0;
+            padding: 0.5rem;
+            background-color: #2d6a4f;
+            color: #fff;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+        .faq-content {
+            display: none;
+            padding: 1rem;
+            background-color: #f1f8f3;
+            border-top: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+        
+        /* Back to Home Button Style */
+.back-to-home {
+    position: absolute;
+    top: 70px; /* Adjust the distance from the top */
+    right: 20px; /* Adjust the distance from the right */
+    padding: 10px 20px;
+    background-color: #2d6a4f; /* Green color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-home:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://www.thextruder.com/wp-content/uploads/2023/07/dw.png.webp" alt="Company Logo">
+        <h1>Business Web Development Packages</h1>
+        <nav>
+            <a href="#website-packages">Website Packages</a>
+            <a href="#hosting-renewal">Hosting Renewal Costs</a>
+            <a href="#hosting-package-details">Hosting Package Details</a>
+            <a href="#faq-container">Faq</a>
+        </nav>
+         <a href="https://thextruder.com/proposalindex/" class="back-to-home">Back to Home</a>
+    </header>
+    <main>
+        <section class="table-container" id="website-packages">
+            <h2>Business Website Packages(Wordpress)</h2>
+            <table>
+                <tr>
+                    <th>Packages</th>
+                    <th>Basic</th>
+                    <th>Advanced</th>
+                    <th>Premium</th>
+                </tr>
+                <tr>
+                    <td>PRICE</td>
+                    <td>4999/-</td>
+                    <td>15999/-</td>
+                    <td>25999/-</td>
+                </tr>
+                <tr>
+                    <td>PAGES</td>
+                    <td>4 (MULTI PAGE)</td>
+                    <td>5 to 7 page (MULTI PAGE)</td>
+                    <td>5-10 page (MULTI PAGE)</td>
+                </tr>
+                <tr>
+                    <td>HOSTING</td>
+                    <td>COMPANY HOSTING</td>
+                    <td>SPACESHIP  </td>
+                    <td>SPACESHIP </td>
+                </tr>
+                <tr>
+                    <td>DOMAIN</td>
+                    <td>.IN Only (FREE)</td>
+                    <td>.IN/.COM (FREE)</td>
+                    <td>.IN/.COM (FREE)</td>
+                </tr>
+                <tr>
+                    <td>THEME</td>
+                    <td> Template Kit</td>
+                    <td> Template Kit(Envato paid) </td>
+                    <td>Themeforest Wp  Licensed Theme</td>
+                </tr>
+                <tr>
+                    <td>CPANEL ACCESS</td>
+                    <td>No</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                </tr>
+                <tr>
+                    <td>BACKEND ACCESS</td>
+                    <td>YES(wp)</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                </tr>
+                <tr>
+                    <td>STACK/CMS</td>
+                    <td>WORDPRESS</td>
+                    <td>WORDPRESS</td>
+                    <td>WORDPRESS</td>
+                </tr>
+                <tr>
+                    <td>Initial SEO</td>
+                    <td>FREE</td>
+                    <td>FREE</td>
+                    <td>FREE</td>
+                </tr>
+                <tr>
+                    <td>SSL Certificate</td>
+                    <td>FREE</td>
+                    <td>FREE</td>
+                    <td>FREE</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="table-container" id="hosting-renewal">
+            <h2>Hosting Renewal Costs</h2>
+            <table>
+                <tr>
+                    <th>Packages</th>
+                    <th>Basic</th>
+                    <th>Advanced</th>
+                    <th>SPACESHIPS</th>
+                    <th>Premium / NAME CHEAP STELLAR</th>
+                </tr>
+                <tr>
+                    <td>SUPPORT RENEWAL CHARGE</td>
+                    <td>500</td>
+                    <td>3000</td>
+                    <td>5000</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>HOSTING RENEWAL</td>
+                    <td>999</td>
+                    <td>3000</td>
+                    <td>3000</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>DOMAIN</td>
+                    <td>1000</td>
+                    <td>1600</td>
+                    <td>1600</td>
+                    <td>1600</td>
+                </tr>
+                <tr>
+                    <td>Approx Total</td>
+                    <td>2499</td>
+                    <td>7600</td>
+                    <td>9600</td>
+                    <td>11600</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="section-header" id="hosting-package-details">
+           <h2 style="color: white;">Hosting Package Details</h2>
+        </section>
+
+        <section class="hosting-package">
+
+
+            <div class="package-box">
+                <h3>SPACE SHIP (WEB HOSTING)</h3>
+                <ul>
+                    <li>1x CPU</li>
+                    <li>20 GB SSD Cloud Storage</li>
+                    <li>5 Hosted Domains</li>
+                    <li>Unlimited Websites</li>
+                    <li>Secured by SSL</li>
+                    <li>5 Mailboxes per Domain (Free for 1 Year)</li>
+                    <li>Powered by SPACEMAIL® (After 1 Year - Paid)</li>
+                </ul>
+                <div class="price">3000</div>
+                <div class="renewal">Renewal Charge  :3000</div>
+            </div>
+
+            
+            <div class="package-box">
+                <h3>GOVIRAL STARTER(COMPANY HOSTING)</h3>
+                <ul>
+                    <li>1 Website</li>
+                    <li>2 GB NVMe SSD Storage</li>
+                    <li>5 Email Accounts</li>
+                    <li>2 TB Bandwidth</li>
+                    <li>cPanel + SoftaculousDemo</li>
+                    <li>Free & Easy Site Migration</li>
+                    <li>Free 10GB CDN</li>
+                    <li>5 Mysql Database</li>
+                    <li>5 Subdomains</li>
+                    <li>1 CPU Core, 1GB RAM</li>
+                    <li>Free SSL Certificate</li>
+                    <li>99.9% Service Uptime</li>
+                    <li>999 Renewal Charge</li>
+                </ul>
+                <div class="price">₹999</div>
+                <div class="renewal">Renewal Charge: ₹999</div>
+            </div>
+
+            <div class="package-box">
+                <h3>GOVIRAL WP BASIC</h3>
+                <ul>
+                    <li>5 Websites</li>
+                    <li>25 GB NVMe SSD Storage</li>
+                    <li>Unlimited Email Accounts</li>
+                    <li>Unlimited Bandwidth</li>
+                    <li>cPanel + SoftaculousDemo</li>
+                    <li>Free & Easy Site Migration</li>
+                    <li>Free 10GB CDN</li>
+                    <li>Unlimited Mysql Database</li>
+                    <li>Unlimited Subdomains</li>
+                    <li>1 CPU Core, 1GB RAM</li>
+                    <li>Free SSL Certificate</li>
+                    <li>99.9% Service Uptime</li>
+                    <li>1500 Renewal Charge</li>
+                </ul>
+                <div class="price">₹1500</div>
+                <div class="renewal">Renewal Charge: ₹1500</div>
+            </div>
+
+            <div class="package-box">
+                <h3>GOVIRAL WP Advanced</h3>
+                <ul>
+                    <li>3 Websites</li>
+                    <li>50 GB NVMe SSD Storage</li>
+                    <li>Unlimited Email Accounts</li>
+                    <li>Unlimited Bandwidth</li>
+                    <li>cPanel + SoftaculousDemo</li>
+                    <li>Free & Easy Site Migration</li>
+                    <li>Free 10GB CDN</li>
+                    <li>Unlimited Mysql Database</li>
+                    <li>Unlimited Subdomains</li>
+                    <li>1 CPU Core, 1GB RAM</li>
+                    <li>Free SSL Certificate</li>
+                    <li>99.9% Service Uptime</li>
+                    <li>1800 Renewal Charge</li>
+                </ul>
+                <div class="price">₹1800</div>
+                <div class="renewal">Renewal Charge: ₹1800</div>
+            </div>
+
+            <div class="package-box">
+                <h3>NAME CHEAP STELLAR</h3>
+                <ul>
+                    <li>3 Websites</li>
+                    <li>20 GB SSD</li>
+                    <li>30 Mailboxes</li>
+                    <li>Website Builder</li>
+                    <li>AI Tools</li>
+                    <li>Speed: 50mbps</li>
+                    <li>5000 Renewal Charge</li>
+                </ul>
+                <div class="price">₹5000</div>
+                <div class="renewal">Renewal Charge: ₹5000</div>
+            </div>
+            
+            
+        </section>
+        
+        
+        
+        <section  id="faq-container">
+            
+            <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+        
+        <!-- FAQ 1 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(1)">What is professional mail?</h3>
+        <div id="answer1" class="faq-content">
+            <p>Professional mail refers to email services provided under a company’s domain (e.g., <username>@<companyname>.com). Unlike personal email services like Gmail or Yahoo, professional mail ensures credibility and business professionalism. It is often used for official correspondence, offering features such as higher security, dedicated support, and integration with other business tools like calendars, file storage, and collaboration platforms.</p>
+        </div>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(2)">What is the difference between cPanel webmail vs G Suite vs other?</h3>
+        <div id="answer2" class="faq-content">
+            <p>cPanel webmail is a simple email management tool hosted on the server. It is included with web hosting and typically has basic email functionalities, but lacks advanced features. G Suite (now Google Workspace) offers a complete suite of productivity tools (e.g., Gmail, Drive, Docs) and advanced email services with enhanced security and team collaboration features. Other email services like Microsoft 365 and Zoho offer similar features with varying integrations and pricing.</p>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>cPanel Webmail</th>
+                    <th>G Suite</th>
+                    <th>Other</th>
+                </tr>
+                <tr>
+                    <td>Platform</td>
+                    <td>cPanel Web Hosting</td>
+                    <td>Cloud-based with Google tools</td>
+                    <td>Varies by provider</td>
+                </tr>
+                <tr>
+                    <td>Email Features</td>
+                    <td>Basic email services</td>
+                    <td>Advanced security, collaboration tools</td>
+                    <td>Varies by provider</td>
+                </tr>
+                <tr>
+                    <td>Storage</td>
+                    <td>Limited to hosting plan</td>
+                    <td>15 GB per user, scalable</td>
+                    <td>Varies</td>
+                </tr>
+                <tr>
+                    <td>Support</td>
+                    <td>Host-specific support</td>
+                    <td>24/7 support from Google</td>
+                    <td>Varies by provider</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(3)">What is hosting?</h3>
+        <div id="answer3" class="faq-content">
+            <p>Hosting is the service that allows you to store your website’s files and data on a server so that people can access them on the internet. There are different types of hosting, such as shared hosting, VPS hosting, and dedicated hosting, each providing varying levels of resources and performance to suit different types of websites and business needs.</p>
+        </div>
+    </div>
+
+    <!-- FAQ 4 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(4)">What is a domain?</h3>
+        <div id="answer4" class="faq-content">
+            <p>A domain is the address used to access a website on the internet, such as "example.com." It is composed of two parts: the domain name (e.g., example) and the top-level domain (TLD) like .com, .org, or a country-specific TLD like .in. A domain name is typically registered with a domain registrar.</p>
+        </div>
+    </div>
+
+    <!-- FAQ 5 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(5)">What is a domain TLD?</h3>
+        <div id="answer5" class="faq-content">
+            <p>A TLD (Top-Level Domain) is the last part of a domain name that follows the final dot, such as .com, .org, or country-specific extensions like .us, .ca, or .in. TLDs categorize domains by purpose or location and play a key role in domain naming conventions.</p>
+        </div>
+    </div>
+
+    <!-- FAQ 6 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(6)">Difference between free theme vs template kit vs Envato licensed theme?</h3>
+        <div id="answer6" class="faq-content">
+            <p>Free themes are often limited in design and customization options, providing basic functionality for users. Template kits, often available for purchase, are pre-built website designs tailored for specific industries or purposes, offering easy-to-use components. Envato licensed themes are premium themes sold on platforms like ThemeForest and provide professional-grade designs, premium features, regular updates, and support.</p>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Free Theme</th>
+                    <th>Template Kit</th>
+                    <th>Envato Licensed Theme</th>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td>Free</td>
+                    <td>Paid</td>
+                    <td>Paid Premium</td>
+                </tr>
+                <tr>
+                    <td>Design Quality</td>
+                    <td>Basic Design</td>
+                    <td>Pre-designed templates</td>
+                    <td>High-quality, professional</td>
+                </tr>
+                <tr>
+                    <td>Support</td>
+                    <td>Community</td>
+                    <td>Varies</td>
+                    <td>Dedicated support</td>
+                </tr>
+                <tr>
+                    <td>Updates</td>
+                    <td>Rare</td>
+                    <td>Regular</td>
+                    <td>Frequent</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- FAQ 7 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(7)">What is cPanel?</h3>
+        <div id="answer7" class="faq-content">
+            <p>cPanel is a web hosting control panel that provides a graphical interface for managing website hosting services. It allows users to manage domains, emails, files, databases, security, and more. cPanel is commonly used by shared hosting providers to make website management easier for non-technical users.</p>
+        </div>
+    </div>
+
+    <!-- FAQ 8 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(8)">What is BACKEND ACCESS of WP?</h3>
+        <div id="answer8" class="faq-content">
+            <p>Backend access of WordPress refers to the WordPress admin dashboard where users can manage all aspects of their website. It allows access to settings, plugins, themes, posts, pages, and more. Only authorized users with admin privileges can access this area.</p>
+        </div>
+    </div>
+
+    <!-- FAQ 9 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(9)">What is WordPress?</h3>
+        <div id="answer9" class="faq-content">
+            <p>WordPress is a content management system (CMS) that allows users to create and manage websites without coding knowledge. It is open-source and comes with a vast range of themes and plugins, allowing users to build everything from blogs to complex business websites.</p>
+        </div>
+    </div>
+
+    <!-- FAQ 10 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(10)">What is initial SEO?</h3>
+        <div id="answer10" class="faq-content">
+            <p>Initial SEO (Search Engine Optimization) refers to the foundational steps taken to optimize a website for search engines. This includes keyword research, optimizing page titles, descriptions, URL structure, alt tags for images, and creating a sitemap. Initial SEO aims to make a website more visible in search engine results.</p>
+        </div>
+    </div>
+
+    <!-- FAQ 11 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(11)">What is an SSL certificate?</h3>
+        <div id="answer11" class="faq-content">
+            <p>An SSL certificate encrypts data exchanged between a website and its users, ensuring that the communication is secure. Websites with SSL certificates display "https" in the URL and a padlock icon, indicating that they are secure and trusted for transactions.</p>
+        </div>
+    </div>
+
+    <!-- FAQ 12 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(12)">What is Bandwidth?</h3>
+        <div id="answer12" class="faq-content">
+            <p>Bandwidth refers to the amount of data that can be transferred between a website and its visitors over a period of time. It determines how much traffic a website can handle and how quickly it can load. Higher bandwidth is necessary for websites with high traffic or rich content like images and videos.</p>
+        </div>
+    </div>
+
+    <!-- FAQ 13 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(13)">What is CDN?</h3>
+        <div id="answer13" class="faq-content">
+            <p>A Content Delivery Network (CDN) is a system of geographically distributed servers that work together to deliver content quickly to users based on their location. CDNs improve website performance by reducing latency and offloading traffic from the main server.</p>
+        </div>
+    </div>
+
+    <!-- FAQ 14 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(14)">What is a Subdomain?</h3>
+        <div id="answer14" class="faq-content">
+            <p>A subdomain is a domain that is part of a larger domain. For example, blog.example.com is a subdomain of example.com. Subdomains are often used to organize content or separate different sections of a website, like support.example.com or shop.example.com.</p>
+        </div>
+    </div>
+    <!-- FAQ 15 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(15)">Why does Namecheap cost more for NAME CHEAP STELLAR?</h3>
+        <div id="answer15" class="faq-content">
+            <p>Namecheap Stellar is a premium hosting plan offering additional features such as more storage space, faster website performance, unlimited bandwidth, enhanced customer support, and advanced security features. These benefits contribute to a higher price compared to basic hosting packages, ensuring a more professional, reliable, and scalable hosting solution for growing businesses.</p>
+        </div>
+    </div>
+
+    <!-- FAQ 16 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(16)">What is a payment gateway?</h3>
+        <div id="answer16" class="faq-content">
+            <p>A payment gateway is a service that authorizes and processes payments for online businesses, ensuring secure transactions between customers and merchants. It acts as an intermediary between the customer’s bank and the merchant’s account, encrypting sensitive information and ensuring funds are transferred securely. Popular payment gateways include PayPal, Stripe, and Square.</p>
+        </div>
+    </div>
+
+    <!-- FAQ 17 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(17)">What is e-commerce?</h3>
+        <div id="answer17" class="faq-content">
+            <p>E-commerce refers to buying and selling goods or services over the internet. It involves online transactions, electronic funds transfers, supply chain management, and online marketing. E-commerce has revolutionized retail by allowing businesses to sell products to global markets, and it encompasses B2B, B2C, C2C, and C2B models.</p>
+        </div>
+    </div>
+
+    <!-- FAQ 18 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(18)">Why choose Themeforest WP Licensed Theme?</h3>
+        <div id="answer18" class="faq-content">
+            <p>Choosing an Envato ThemeForest WP licensed theme ensures access to high-quality, professionally designed themes that are regularly updated and supported. These themes offer customization options, compatibility with popular plugins, SEO optimization, and responsive design, making them ideal for building professional and feature-rich websites. Additionally, ThemeForest provides regular updates, bug fixes, and 24/7 support.</p>
+        </div>
+    </div>
+
+    <!-- FAQ 19 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(19)">What is country-based domain?</h3>
+        <div id="answer19" class="faq-content">
+            <p>A country-based domain, or country-code top-level domain (ccTLD), is a domain extension that is specific to a particular country or geographic region. Examples include .in for India, .ca for Canada, .uk for the United Kingdom, and .de for Germany. These domains help businesses and organizations target local audiences and build credibility within specific regions.</p>
+        </div>
+    </div>
+
+    <!-- FAQ 20 -->
+    <div class="faq">
+        <h3 onclick="toggleAnswer(20)">List domain TLD?</h3>
+        <div id="answer20" class="faq-content">
+            <p>There are numerous domain TLDs available, and they can be categorized into several types, including generic TLDs (gTLDs), country-code TLDs (ccTLDs), and new TLDs. Some popular TLDs are:</p>
+            <ul>
+                <li>.com – Commercial entities</li>
+                <li>.org – Nonprofit organizations</li>
+                <li>.net – Network services</li>
+                <li>.gov – Government websites</li>
+                <li>.edu – Educational institutions</li>
+                <li>.in – India</li>
+                <li>.uk – United Kingdom</li>
+                <li>.ca – Canada</li>
+                <li>.au – Australia</li>
+                <li>.co – Colombia or company</li>
+                <li>.xyz – New generic TLD</li>
+                <li>.store – E-commerce websites</li>
+                <li>.tech – Technology-related websites</li>
+            </ul>
+            <p>This is just a small selection; there are hundreds of TLDs available for various purposes.</p>
+        </div>
+    </div>
+</div>
+
+            
+         </section>   
+    </main>
+    
+    <script>
+    function toggleAnswer(id) {
+        // Get all answer elements
+        var answers = document.querySelectorAll('.faq-content');
+
+        // Loop through each answer and hide them
+        answers.forEach(function(answer) {
+            if (answer.id !== 'answer' + id) {
+                answer.style.display = 'none';
+            }
+        });
+
+        // Toggle the clicked answer
+        var clickedAnswer = document.getElementById('answer' + id);
+        if (clickedAnswer.style.display === "none" || clickedAnswer.style.display === "") {
+            clickedAnswer.style.display = "block";
+        } else {
+            clickedAnswer.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>

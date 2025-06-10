@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WooCommerce Packages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #fff;
+            color: #333;
+            padding: 1rem 0;
+            text-align: center;
+            border-bottom: 2px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            max-width: 100px;
+            margin: 0 1rem;
+            vertical-align: middle;
+        }
+
+        nav {
+            margin-top: 1rem;
+            background-color: #2d6a4f;
+            padding: 0.5rem 0;
+        }
+
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        h2 {
+            color: #2d6a4f;
+            margin-bottom: 1rem;
+        }
+
+        .table-container {
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #2d6a4f;
+            color: #fff;
+        }
+        
+        h2 {
+    text-align: center;
+}
+
+        /* Back to Home Button Style */
+.back-to-home {
+    position: absolute;
+    top: 50px; /* Adjust the distance from the top */
+    right: 20px; /* Adjust the distance from the right */
+    padding: 10px 20px;
+    background-color: #2d6a4f; /* Green color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-home:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Section Heading */
+.section-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #2d6a4f; /* Green color */
+    margin: 30px 0;
+    font-weight: bold;
+}
+
+/* Hosting Packages Container */
+.hosting-container {
+    padding: 30px;
+}
+
+.hosting-packages {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Individual Hosting Package */
+.package {
+    background-color: #fff;
+    border: 1px solid #c2c2c2;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.package:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.package h3 {
+    font-size: 1.25rem;
+    color: #2d6a4f;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.package ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.package ul li {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.package ul li strong {
+    color: #2d6a4f;
+}
+
+/* Hover Effect for Package */
+.package:hover ul li {
+    color: #1a4d3f;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .hosting-packages {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .hosting-packages {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .hosting-packages {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+ .pros-cons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .pros, .cons {
+            padding: 20px;
+            background-color: #f4f7f6;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .pros h3, .cons h3 {
+            color: #2d6a4f;
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+        }
+
+        .pros ul, .cons ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pros ul li, .cons ul li {
+            margin: 10px 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .pros ul li i, .cons ul li i {
+            color: #2d6a4f;
+            margin-right: 10px;
+        }
+
+        .cons ul li i {
+            color: #e74c3c;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        
+        .faq-container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* FAQ Item Styles */
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #ddd;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #ccc;
+    border-radius: 0 0 5px 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .faq-container {
+        width: 95%;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://www.thextruder.com/wp-content/uploads/2023/07/dw.png.webp" alt="TheXtruder Logo">
+        
+        <h1>Woo-commerce Proposal</h1>
+        <nav>
+            <a href="#woocommerce-packages">Woocommerce Packages</a>
+            <a href="#Hosting">Hosting</a>
+            <a href="#renewal-costs">Renewal Costs</a>
+            <a href="#pros-cons">pros Cons</a>
+        </nav>
+         <a href="https://thextruder.com/proposalindex/ecomerce.html" class="back-to-home">Back to Home</a>
+    </header>
+    <main>
+        <!-- WooCommerce Packages Section -->
+        <section class="table-container" id="woocommerce-packages">
+            <h2>WooCommerce Website Packages</h2>
+            <table>
+                <tr>
+                    <th>Packages</th>
+                    <th>Basic</th>
+                    <th>Advanced</th>
+                    <th>Premium</th>
+                </tr>
+                <tr>
+                    <td>PRICE</td>
+                    <td>₹30,000/-</td>
+                    <td>₹60,000/-</td>
+                    <td>₹99,999/-</td>
+                </tr>
+                <tr>
+                    <td>PAGES</td>
+                    <td>5 (Multi-Page)</td>
+                    <td>10 to 25 pages (Multi-Page)</td>
+                    <td>20 to 50 pages (Multi-Page)</td>
+                </tr>
+                <tr>
+                    <td>HOSTING</td>
+                    <td>GoViral Power Hosting Starter</td>
+                    <td>GoViral Power Hosting Advanced</td>
+                    <td>GoViral Power Hosting Pro</td>
+                </tr>
+                <tr>
+                    <td>DOMAIN</td>
+                    <td>.IN/.COM (Free)</td>
+                    <td>.IN/.COM (Free)</td>
+                    <td>.IN/.COM (Free)</td>
+                </tr>
+                <tr>
+                    <td>THEME</td>
+                    <td>Themeforest WP Licensed Theme</td>
+                    <td>Themeforest WP Licensed Theme</td>
+                    <td>Themeforest WP Licensed Theme High End</td>
+                </tr>
+                <tr>
+                    <td>CPANEL ACCESS</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>BACKEND ACCESS</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>STACK/CMS</td>
+                    <td>WordPress</td>
+                    <td>WordPress</td>
+                    <td>WordPress</td>
+                </tr>
+                <tr>
+                    <td>Initial SEO</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td>SSL Certificate</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Pricing Section -->
+        <section >
+            <h2>Pricing</h2>
+            <p>Our WooCommerce packages are designed to suit businesses of all sizes, starting at ₹30,000/- for basic websites to ₹99,999/- for premium, feature-rich eCommerce solutions.</p>
+        </section>
+
+        <!-- Features Section -->
+        <section >
+            <h2>Features</h2>
+            <p>All packages include:</p>
+            <ul>
+                <li>Custom WordPress WooCommerce themes</li>
+                <li>Secure and scalable hosting</li>
+                <li>Free SSL and SEO setup</li>
+                <li>User-friendly backend for easy management</li>
+            </ul>
+        </section>
+
+        <!-- Hosting Packages Section -->
+        <section id="Hosting">
+         
+        <div class="hosting-container">
+    <h2 class="section-heading">Woocomerce Hosting Packages</h2>
+    
+    <div class="hosting-packages">
+        <div class="package">
+            <h3>GoViral Power Hosting Starter</h3>
+             <ul>
+                  <li><strong>1</strong> Website</li>
+                     <li><strong>200 GB</strong> NVMe SSD Storage</li>
+                      <li><strong>Unlimited</strong> Email Accounts</li>
+                      <li><strong>Unlimited</strong> Bandwidth</li>
+                      <li><strong>cPanel + Softaculous Demo</strong></li>
+                       <li><strong>Free & Easy Site Migration</strong></li>
+                   <li><strong>Free 10GB</strong> CDN</li>
+                   <li><strong>Unlimited</strong> MySQL Databases</li>
+                    <li><strong>Unlimited</strong> Subdomains</li>
+                 <li><strong>1.5</strong> CPU Core, <strong>1.5GB</strong> RAM</li>
+                <li><strong>Free</strong> SSL Certificate</li>
+             <li><strong>99.9%</strong> Service Uptime</li>
+                <li><strong>Renewal Amount: ₹2,500</strong></li>
+        </ul>
+        </div>
+
+        <div class="package">
+            <h3>GoViral Power Hosting Advanced</h3>
+            <ul>
+    <li><strong>5</strong> Website</li>
+    <li><strong>2 TB</strong> NVMe SSD Storage</li>
+    <li><strong>Unlimited</strong> Email Accounts</li>
+    <li><strong>Unlimited</strong> Bandwidth</li>
+    <li><strong>cPanel + Softaculous Demo</strong></li>
+    <li><strong>Free & Easy Site Migration</strong></li>
+    <li><strong>Free 10GB</strong> CDN</li>
+    <li><strong>Unlimited</strong> MySQL Databases</li>
+    <li><strong>Unlimited</strong> Subdomains</li>
+    <li><strong>1.5</strong> CPU Core, <strong>2GB</strong> RAM</li>
+    <li><strong>Free</strong> SSL Certificate</li>
+    <li><strong>99.9%</strong> Service Uptime</li>
+    <li><strong>Renewal Amount: ₹4,000</strong></li>
+</ul>
+
+        </div>
+
+        <div class="package">
+            <h3>GoViral Power Hosting Pro</h3>
+            <ul>
+    <li><strong>Unlimited</strong> Website</li>
+    <li><strong>Unlimited</strong> NVMe SSD Storage</li>
+    <li><strong>Unlimited</strong> Email Accounts</li>
+    <li><strong>Unlimited</strong> Bandwidth</li>
+    <li><strong>cPanel + Softaculous Demo</strong></li>
+    <li><strong>Free & Easy Site Migration</strong></li>
+    <li><strong>Free 10GB</strong> CDN</li>
+    <li><strong>Unlimited</strong> MySQL Databases</li>
+    <li><strong>Unlimited</strong> Subdomains</li>
+    <li><strong>3</strong> CPU Core, <strong>3GB</strong> RAM</li>
+    <li><strong>Free</strong> SSL Certificate</li>
+    <li><strong>99.9%</strong> Service Uptime</li>
+    <li><strong>Renewal Amount: ₹7,000</strong></li>
+</ul>
+
+        </div>
+
+        <div class="package">
+            <h3>NME Cheap Pulsar VPS Hosting</h3>
+       <ul>
+    <li><strong>Unlimited</strong> Website</li>
+    <li><strong>40 GB</strong> SSD RAID 10</li>
+    <li><strong>Unlimited</strong> Email Accounts</li>
+    <li><strong>1000 GB</strong> Bandwidth</li>
+    <li><strong>cPanel + Softaculous Demo</strong></li>
+    <li><strong>Free & Easy Site Migration</strong></li>
+    <li><strong>Unlimited</strong> MySQL Databases</li>
+    <li><strong>Unlimited</strong> Subdomains</li>
+    <li><strong>Renewal Amount: ₹9,500</strong></li>
+</ul>
+
+
+        </div>
+
+        <div class="package">
+            <h3>Name Cheap WordPress Hosting EasyWP Turbo</h3>
+            <ul>
+    <li><strong>50 GB</strong> SSD Storage</li>
+    <li><strong>200k</strong> Visitors/Month</li>
+    <li><strong>1.5x</strong> More CPU</li>
+    <li><strong>1.5x</strong> More RAM</li>
+    <li><strong>Free</strong> CDN</li>
+    <li><strong>Free</strong> SSL</li>
+    <li><strong>Free</strong> Brizy Site Builder</li>
+    <li><strong>Free</strong> RelateSEO</li>
+    <li><strong>HackGuardian</strong></li>
+    <li><strong>MalwareGuardian AutoCleaning Protection</strong></li>
+    <li><strong>Renewal Amount: ₹10,000</strong></li>
+</ul>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Renewal Costs Section -->
+        <section id="renewal-costs">
+            <h2>Renewal Costs</h2>
+            <table>
+                <tr>
+                    <th>Package</th>
+                    <th>Basic</th>
+                    <th>Advanced</th>
+                    <th>Premium</th>
+                </tr>
+                <tr>
+                    <td>Support Renewal Charge</td>
+                    <td>₹5,000</td>
+                    <td>₹10,000</td>
+                    <td>₹15,000</td>
+                </tr>
+                <tr>
+                    <td>Hosting Renewal</td>
+                    <td>₹2,500</td>
+                    <td>₹4,000</td>
+                    <td>₹7,000</td>
+                </tr>
+                <tr>
+                    <td>Domain Renewal</td>
+                    <td>₹1,500</td>
+                    <td>₹1,500</td>
+                    <td>₹1,500</td>
+                </tr>
+                <tr>
+                    <td>Approx Total</td>
+                    <td>₹9,000</td>
+                    <td>₹15,500</td>
+                    <td>₹23,500</td>
+                </tr>
+            </table>
+        </section>
+        
+        <div class="container">
+        <h2>WooCommerce - Pros and Cons</h2>
+        
+        <section id="pros-cons" class="pros-cons">
+            <!-- Pros Section -->
+            <div class="pros">
+                <h3><i class="fas fa-thumbs-up"></i> Pros of WooCommerce</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Open Source and Free</li>
+                    <li><i class="fas fa-check-circle"></i> Highly Customizable</li>
+                    <li><i class="fas fa-check-circle"></i> Requires WordPress Hosting</li>
+                    <li><i class="fas fa-check-circle"></i> Good for Developers</li>
+                    <li><i class="fas fa-check-circle"></i> Wide Range of Plugins</li>
+                    <li><i class="fas fa-check-circle"></i> Free & Paid Extensions</li>
+                    <li><i class="fas fa-check-circle"></i> Suitable for Large Scale Stores</li>
+                    <li><i class="fas fa-check-circle"></i> Full Control Over Your Store</li>
+                    <li><i class="fas fa-check-circle"></i> SEO-Friendly Platform</li>
+                    <li><i class="fas fa-check-circle"></i> Large Community and Support</li>
+                </ul>
+            </div>
+
+            <!-- Cons Section -->
+            <div class="cons">
+                <h3><i class="fas fa-thumbs-down"></i> Cons of WooCommerce</h3>
+                <ul>
+                    <li><i class="fas fa-times-circle"></i> Requires WordPress Knowledge</li>
+                    <li><i class="fas fa-times-circle"></i> Ongoing Maintenance and Updates</li>
+                    <li><i class="fas fa-times-circle"></i> Additional Costs for Extensions and Themes</li>
+                    <li><i class="fas fa-times-circle"></i> Hosting and Performance Issues</li>
+                    <li><i class="fas fa-times-circle"></i> Not Ideal for Beginners Without Technical Skills</li>
+                    <li><i class="fas fa-times-circle"></i> Can Be Time-Consuming to Set Up</li>
+                    <li><i class="fas fa-times-circle"></i> Need to Handle Security and Backups</li>
+                    <li><i class="fas fa-times-circle"></i> Limited Built-in Features for Small Businesses</li>
+                </ul>
+            </div>
+        </section>
+         
+             
+            <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+         <div class="faq-item">
+            <button class="faq-question">1. What is WooCommerce?</button>
+            <div class="faq-answer">
+                <p>WooCommerce is an open-source e-commerce plugin for WordPress that allows you to sell products and services online.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">2. Is WooCommerce free to use?</button>
+            <div class="faq-answer">
+                <p>Yes, the WooCommerce plugin is free. However, additional costs may include hosting, domain registration, and premium themes or plugins.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">3. How do I install WooCommerce?</button>
+            <div class="faq-answer">
+                <p>You can install WooCommerce directly from your WordPress dashboard by navigating to Plugins > Add New and searching for "WooCommerce".</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">4. Does WooCommerce support multiple languages?</button>
+            <div class="faq-answer">
+                <p>Yes, WooCommerce supports multiple languages through various translation plugins, allowing you to cater to a global audience.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">5. Can I sell digital products with WooCommerce?</button>
+            <div class="faq-answer">
+                <p>Yes, WooCommerce allows you to sell digital products, such as e-books or software, with features to manage downloads and licenses.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">6. How does WooCommerce handle shipping?</button>
+            <div class="faq-answer">
+                <p>WooCommerce offers flexible shipping options, including flat rates, free shipping, and real-time shipping calculations, allowing you to tailor shipping methods to your business needs.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">7. Is WooCommerce suitable for large-scale businesses?</button>
+            <div class="faq-answer">
+                <p>Yes, WooCommerce is scalable and can accommodate businesses of all sizes, from small startups to large enterprises, with the right hosting and optimization.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">8. How does WooCommerce compare to Shopify?</button>
+            <div class="faq-answer">
+                <p>While Shopify is a dedicated e-commerce platform with hosting included, WooCommerce is a plugin for WordPress, offering more customization and flexibility but requiring separate hosting.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">9. Can I integrate WooCommerce with other platforms?</button>
+            <div class="faq-answer">
+                <p>Yes, WooCommerce offers various integrations with platforms like Mailchimp, QuickBooks, and Zapier, allowing you to extend its functionality.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">10. Does WooCommerce support multiple payment gateways?</button>
+            <div class="faq-answer">
+                <p>Yes, WooCommerce supports multiple payment gateways, including PayPal, Stripe, and bank transfers, with additional options available through extensions.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">11. Is WooCommerce mobile-friendly?</button>
+            <div class="faq-answer">
+                <p>Yes, WooCommerce is responsive and works well on mobile devices, ensuring a seamless shopping experience for customers on all platforms.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">12. How do I manage inventory in WooCommerce?</button>
+            <div class="faq-answer">
+                <p>WooCommerce provides built-in inventory management features, allowing you to track stock levels, set stock statuses, and receive notifications for low stock.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">13. Can I offer discounts and coupons in WooCommerce?</button>
+            <div class="faq-answer">
+                <p>Yes, WooCommerce allows you to create and manage various types of discounts and coupons, including percentage discounts, fixed amount discounts, and free shipping offers.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">14. How do I handle taxes in WooCommerce?</button>
+            <div class="faq-answer">
+                <p>WooCommerce provides tax settings where you can configure tax rates based on location, product type, and other factors, ensuring compliance with local tax laws.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">15. Does WooCommerce support multiple currencies?</button>
+            <div class="faq-answer">
+                <p>Yes, WooCommerce supports multiple currencies, allowing you to sell products to customers worldwide and display prices in their local currency.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">16. How do I secure my WooCommerce store?</button>
+            <div class="faq-answer">
+                <p>To secure your WooCommerce store, ensure you use strong passwords, keep your WordPress and WooCommerce plugins updated, implement SSL certificates, and consider using security plugins for additional protection.</p>
+            </div>
+        </div>
+    
+    </div>
+    
+    
+    
+    </main>
+</body>
+
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function () {
+            const answer = this.nextElementSibling;
+
+            // Toggle the display of the answer
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+            } else {
+                answer.style.display = 'block';
+            }
+        });
+    });
+});
+
+</script>
+</html>

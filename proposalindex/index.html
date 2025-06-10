@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Index</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            color: #2d6a4f; /* Green text color */
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        header img {
+    max-width: 120px;
+    margin-bottom: 10px;
+    display: inline-block;
+    float: left;
+}
+
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #2d6a4f;
+            font-weight: bold;
+        }
+
+        header nav {
+            margin-top: 1rem;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #2d6a4f;
+            margin: 0 1rem;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        header nav a:hover {
+            color: #1a4d3f;
+        }
+
+        .container {
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+        }
+
+        .proposal-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            height: 300px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .proposal-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .proposal-box i {
+            font-size: 3rem;
+            color: #2d6a4f;
+            margin-bottom: 1rem;
+        }
+
+        .proposal-box h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #2d6a4f;
+        }
+
+        .proposal-box a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            background-color: #2d6a4f;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .proposal-box a:hover {
+            background-color: #1a4d3f;
+        }
+
+        footer {
+            background-color: #2d6a4f;
+            padding: 1rem 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://www.thextruder.com/wp-content/uploads/2023/07/dw.png.webp" alt="TheXtruder Logo">
+    <h1>Proposal Index</h1>
+    <nav>
+    
+    </nav>
+</header>
+
+<div class="container">
+    <div class="proposal-box" id="website-proposal">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Website Proposal</h3>
+        <a href="websiteproposal.html">View Proposal</a>
+    </div>
+    
+    <div class="proposal-box" id="designing-proposal">
+        <i class="fas fa-paint-brush"></i>
+        <h3>Designing Proposals</h3>
+        <a href="designingproposal.html">View Proposal</a>
+    </div>
+
+
+    <div class="proposal-box" id="trademark-search-proposal">
+        <i class="fas fa-search"></i>
+        <h3>Trademark (india) Proposal</h3>
+        <a href="trademark.html">View Proposal</a>
+    </div>
+    <div class="proposal-box" id="company-registration-proposal">
+    <i class="fas fa-building"></i>
+    <h3>Company Registration Proposal</h3>
+    <a href="company-registration.html">View Proposal</a>
+    </div>
+
+    <div class="proposal-box" id="seo-services-proposal">
+        <i class="fas fa-search-plus"></i>
+        <h3>SEO Services Proposal</h3>
+        <a href="#">View Proposal</a>
+    </div>
+
+    <div class="proposal-box" id="branding-proposal">
+        <i class="fas fa-flag"></i>
+        <h3>Branding Proposal</h3>
+        <a href="#">View Proposal</a>
+    </div>
+
+    <div class="proposal-box" id="marketing-strategy-proposal">
+        <i class="fas fa-chart-line"></i>
+        <h3>Marketing Strategy Proposal</h3>
+        <a href="#">View Proposal</a>
+    </div>
+</div>
+
+<!-- Placeholder sections for proposals -->
+<section id="website-proposal-section" style="display:none;">
+    <h3>Website Proposal</h3>
+    <p>Details for the website proposal will be listed here.</p>
+    
+</section>
+
+<section id="designing-proposal-section" style="display:none;">
+    <h3>Designing Proposals</h3>
+    <p>Details for the designing proposal will be listed here.</p>
+</section>
+
+<section id="ecommerce-proposal-section" style="display:none;">
+    <h3>E-commerce Proposal</h3>
+    <p>Details for the e-commerce proposal will be listed here.</p>
+</section>
+
+<section id="trademark-search-proposal-section" style="display:none;">
+    <h3>Trademark (india) Proposal</h3>
+    <p>Details for the trademark  proposal will be listed here.</p>
+</section>
+
+<section id="seo-services-proposal-section" style="display:none;">
+    <h3>SEO Services Proposal</h3>
+    <p>Details for the SEO services proposal will be listed here.</p>
+</section>
+
+<section id="branding-proposal-section" style="display:none;">
+    <h3>Branding Proposal</h3>
+    <p>Details for the branding proposal will be listed here.</p>
+</section>
+
+<section id="marketing-strategy-proposal-section" style="display:none;">
+    <h3>Marketing Strategy Proposal</h3>
+    <p>Details for the marketing strategy proposal will be listed here.</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 TheXtruder. All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>

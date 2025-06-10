@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Packages</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            color: #2d6a4f;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            max-width: 120px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #2d6a4f;
+            font-weight: bold;
+        }
+
+        .back-to-home {
+            background-color: #2d6a4f; /* Green color */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-home:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        .container {
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+        }
+
+        .package-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            height: 300px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .package-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .package-box i {
+            font-size: 3rem;
+            color: #2d6a4f;
+            margin-bottom: 1rem;
+        }
+
+        .package-box h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #2d6a4f;
+        }
+
+        .package-box a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            background-color: #2d6a4f;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .package-box a:hover {
+            background-color: #1a4d3f;
+        }
+
+        footer {
+            background-color: #2d6a4f;
+            padding: 1rem 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Fullscreen Popup Styling */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .popup-content {
+            background-color: #2d6a4f;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 900px;
+            height: 80%;
+            overflow-y: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            text-align: center;
+        }
+
+        .popup-close {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .popup-close:hover {
+            background-color: #ff1a1a;
+        }
+
+        .popup-details table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        .popup-details th, .popup-details td {
+            padding: 12px;
+            border: 1px solid #fff;
+            text-align: left;
+        }
+
+        .popup-details th {
+            background-color: #1a4d3f;
+            font-size: 1.1rem;
+        }
+
+        .popup-details td {
+            font-size: 1rem;
+        }
+
+        /* Animation for fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://www.thextruder.com/wp-content/uploads/2023/07/dw.png.webp" alt="TheXtruder Logo">
+    <h1>Design Packages</h1>
+    <a href="https://www.thextruder.com/proposalindex/" class="back-to-home">Back to Home</a>
+</header>
+
+<div class="container">
+  <div class="package-box" id="logo-designing">
+    <i class="fas fa-paint-brush"></i>
+    <h3>Logo Designing Packages</h3>
+    <a href="#" onclick="openPopup('logo-designing-popup')">View Packages</a>
+</div>
+
+<!-- Popup for Logo Designing -->
+<div class="popup" id="logo-designing-popup">
+    <div class="popup-content">
+        <button class="popup-close" onclick="closePopup('logo-designing-popup')">Close</button>
+        <h2><i class="fas fa-paint-brush"></i> Logo Designing Packages</h2>
+        <div class="popup-details">
+            <table>
+                <tr>
+                    <th>Package</th>
+                    <th>Basic Pack</th>
+                    <th>Premium Pack</th>
+                    <th>Luxury Pack</th>
+                    <th>Exclusive Pack</th>
+                </tr>
+                <tr>
+                    <td>Details</td>
+                    <td>
+                        Png / Jpeg Files<br>
+                        Logo Pdf File<br>
+                        Logofolio
+                    </td>
+                    <td>
+                        Png / Jpeg Files<br>
+                        Logo Pdf File<br>
+                        Logofolio<br>
+                        Logo Vector File<br>
+                        Basic Logo Construction Details<br>
+                        Basic Logo Guidelines<br>
+                        
+                    </td>
+                    <td>
+                        Png / Jpeg Files<br>
+                        Logo Pdf File<br>
+                        Logofolio<br>
+                        Logo Vector File<br>
+                        Basic Logo Construction Details<br>
+                        Basic Logo Guidelines<br>
+                        Visiting Card<br>
+                        Letter Head<br>
+                        Envelope<br>
+                        ID Card Design(10 outs)<br>
+                        Social Media 10 Normal Posters<br>
+                         Logo Intro
+                    </td>
+                    <td>
+                        Png / Jpeg Files<br>
+                        Logo Pdf File<br>
+                        Logofolio<br>
+                        Logo Vector File<br>
+                        Basic Logo Construction Details<br>
+                        Basic Logo Guidelines<br>
+                        Visiting Card<br>
+                        Letter Head<br>
+                        Envelope<br>
+                        Social Media 10 Normal Posters<br>
+                        Brochure Designing - 8 Pg<br>
+                        ID Card Design(10 outs)<br>
+                        Logo Intro<br>
+                        Basic Website
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td>₹5000</td>
+                    <td>₹10000</td>
+                    <td>₹20000</td>
+                    <td>₹30000</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+  <!-- Poster Designing Packages Section -->
+    <div class="package-box" id="poster-designing">
+        <i class="fas fa-image"></i>
+        <h3>Poster Designing Packages</h3>
+        <a href="#" onclick="openPopup('poster-designing-popup')">View Packages</a>
+    </div>
+    <!-- Popup for Poster Designing Packages -->
+<div class="popup" id="poster-designing-popup">
+    <div class="popup-content">
+        <button class="popup-close" onclick="closePopup('poster-designing-popup')">Close</button>
+        <h2><i class="fas fa-image"></i> Poster Designing Packages</h2>
+        <div class="popup-details">
+            <table>
+                <tr>
+                    <th>Package</th>
+                    <th>10 Posters</th>
+                    <th>20 Posters</th>
+                    <th>30 Posters</th>
+                </tr>
+                <tr>
+                    <td>Normal</td>
+                    <td>₹3500</td>
+                    <td>₹7000</td>
+                    <td>₹9999</td>
+                </tr>
+                <tr>
+                    <td>Creative</td>
+                    <td>₹7000</td>
+                    <td>₹13000</td>
+                    <td>₹20000</td>
+                </tr>
+                <tr>
+                    <td>Special Day</td>
+                    <td>₹4500</td>
+                    <td>₹8500</td>
+                    <td>₹13000</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+    
+    <!-- Video & Motion Graphics Section -->
+    <div class="package-box" id="video-motion-graphics">
+        <i class="fas fa-video"></i>
+        <h3>Video & Motion Graphics</h3>
+        <a href="#" onclick="openPopup('video-motion-graphics-popup')">View Packages</a>
+    </div>
+
+
+<!-- Popup for Video & Motion Graphics -->
+<div class="popup" id="video-motion-graphics-popup">
+    <div class="popup-content">
+        <button class="popup-close" onclick="closePopup('video-motion-graphics-popup')">Close</button>
+        <h2><i class="fas fa-video"></i> Video & Motion Graphics Packages</h2>
+        <div class="popup-details">
+            <table>
+                <tr>
+                    <th>Package</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Logo Intro</td>
+                    <td>₹2000</td>
+                </tr>
+                <tr>
+                    <td>Logo Intro with Concept</td>
+                    <td>₹5000</td>
+                </tr>
+                <tr>
+                    <td>Anchor Video</td>
+                    <td>₹8000 (Price varies depending on the anchor)</td>
+                </tr>
+                <tr>
+                    <td>Motion Graphics Video without Voice Over (30 sec)</td>
+                    <td>₹5000</td>
+                </tr>
+                <tr>
+                    <td>Motion Graphics Video with AI Voice Over (30 sec)</td>
+                    <td>₹7000</td>
+                </tr>
+                <tr>
+                    <td>Motion Graphics Video with Premium Voice Over (30 sec)</td>
+                    <td>₹14000</td>
+                </tr>
+                <tr>
+                    <td>Product Promo</td>
+                    <td>₹3000</td>
+                </tr>
+                <tr>
+                    <td>Product Animation</td>
+                    <td>₹10000</td>
+                </tr>
+                <tr>
+                    <td>Animation Videos (Price depends on concept)</td>
+                    <td>Price varies</td>
+                </tr>
+                <tr>
+                    <td>Motion Poster</td>
+                    <td>₹3000</td>
+                </tr>
+                <tr>
+                    <td>CGI (10-20 sec)</td>
+                    <td>₹15000</td>
+                </tr>
+                <tr>
+                    <td>3D Animation (per sec)</td>
+                    <td>₹3000</td>
+                </tr>
+                <tr>
+                    <td>2D Animation (per sec)</td>
+                    <td>₹2000</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Design Gadgets Section -->
+    <div class="package-box" id="design-gadgets">
+        <i class="fas fa-cogs"></i>
+        <h3>Design Gadgets</h3>
+        <a href="#" onclick="openPopup('design-gadgets-popup')">View Packages</a>
+    </div>
+</div>
+
+<!-- Popup for Design Gadgets -->
+<div class="popup" id="design-gadgets-popup">
+    <div class="popup-content">
+        <button class="popup-close" onclick="closePopup('design-gadgets-popup')">Close</button>
+        <h2><i class="fas fa-cogs"></i> Design Gadgets Packages</h2>
+        <div class="popup-details">
+            <table>
+                <tr>
+                    <th>Package</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Normal Poster</td>
+                    <td>₹400</td>
+                </tr>
+                <tr>
+                    <td>Creative Poster</td>
+                    <td>₹800</td>
+                </tr>
+                <tr>
+                    <td>Special Day Poster</td>
+                    <td>₹500</td>
+                </tr>
+                <tr>
+                    <td>Flyers</td>
+                    <td>₹700</td>
+                </tr>
+                <tr>
+                    <td>Motion Poster</td>
+                    <td>₹3000</td>
+                </tr>
+                <tr>
+                    <td>Printing Files</td>
+                    <td>₹1000</td>
+                </tr>
+                <tr>
+                    <td>Visiting Card (Double Side)</td>
+                    <td>₹1000</td>
+                </tr>
+                <tr>
+                    <td>Business Cards</td>
+                    <td>₹1000</td>
+                </tr>
+                <tr>
+                    <td>Notepads</td>
+                    <td>₹500</td>
+                </tr>
+                <tr>
+                    <td>Presentation Folders</td>
+                    <td>₹1000</td>
+                </tr>
+                <tr>
+                    <td>Invoice Templates</td>
+                    <td>₹1000</td>
+                </tr>
+                <tr>
+                    <td>Personalized Notecards</td>
+                    <td>₹700</td>
+                </tr>
+                <tr>
+                    <td>Invitations (e.g., Weddings, Parties)</td>
+                    <td>₹1500</td>
+                </tr>
+                <tr>
+                    <td>Thank You Cards</td>
+                    <td>₹1000</td>
+                </tr>
+                <tr>
+                    <td>Address Labels</td>
+                    <td>₹500</td>
+                </tr>
+                <tr>
+                    <td>Stationery Sets (Matching Envelopes, Paper, and Notecards)</td>
+                    <td>₹1000</td>
+                </tr>
+                <tr>
+                    <td>Wedding Invitations</td>
+                    <td>₹1500</td>
+                </tr>
+                <tr>
+                    <td>Save-the-Date Cards</td>
+                    <td>₹1000</td>
+                </tr>
+                <tr>
+                    <td>RSVP Cards</td>
+                    <td>₹1000</td>
+                </tr>
+                <tr>
+                    <td>Menu Cards</td>
+                    <td>₹1000 per page</td>
+                </tr>
+                <tr>
+                    <td>Program Booklets</td>
+                    <td>₹1000 per page</td>
+                </tr>
+                <tr>
+                    <td>Envelope</td>
+                    <td>₹1000</td>
+                </tr>
+                <tr>
+                    <td>Stickers</td>
+                    <td>₹1000</td>
+                </tr>
+                <tr>
+                    <td>Letter Head</td>
+                    <td>₹1000</td>
+                </tr>
+                <tr>
+                    <td>T SHIRT DESIGNINGS</td>
+                    <td>₹5000</td>
+                </tr>
+                <tr>
+                    <td>ID CARD </td>
+                    <td>1500/- (100 FOR EACH OUT EXTRA)</td>
+                </tr>
+                
+                <tr>
+                    <td>PACKAGE DESINIGS </td>
+                    <td>3000-5000</td>
+                </tr>
+                <tr>
+                    <td>CATALOGUE DEISGNINGS</td>
+                    <td>PER PAGE 1000</td>
+                </tr>
+                <tr>
+                    <td>PRODUCT FLYERS</td>
+                    <td>1000 PER PAGE</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 TheXtruder. All rights reserved.</p>
+</footer>
+
+<script>
+    // Function to open the popup (fullscreen)
+    function openPopup(popupId) {
+        document.getElementById(popupId).style.display = "flex";
+    }
+
+    // Function to close the popup
+    function closePopup(popupId) {
+        document.getElementById(popupId).style.display = "none";
+    }
+</script>
+
+</body>
+</html>

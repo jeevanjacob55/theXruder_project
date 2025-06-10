@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Registration Packages</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #fff;
+            color: #2d6a4f;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            max-width: 120px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #2d6a4f;
+            font-weight: bold;
+        }
+
+        .back-to-home {
+            background-color: #2d6a4f; /* Green color */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-home:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        .container {
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+            flex: 1;
+        }
+
+        .package-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            height: 300px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .package-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .package-box i {
+            font-size: 3rem;
+            color: #2d6a4f;
+            margin-bottom: 1rem;
+        }
+
+        .package-box h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #2d6a4f;
+        }
+
+        .package-box a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            background-color: #2d6a4f;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .package-box a:hover {
+            background-color: #1a4d3f;
+        }
+
+        footer {
+            background-color: #2d6a4f;
+            padding: 1rem 0;
+            color: #fff;
+            text-align: center;
+            width: 100%;
+            margin-top: auto; /* Ensures the footer stays at the bottom */
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Fullscreen Popup Styling */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .popup-content {
+            background-color: #2d6a4f;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 900px;
+            height: 80%;
+            overflow-y: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            text-align: center;
+        }
+
+        .popup-close {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .popup-close:hover {
+            background-color: #ff1a1a;
+        }
+
+        .popup-details table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        .popup-details th, .popup-details td {
+            padding: 12px;
+            border: 1px solid #fff;
+            text-align: left;
+        }
+
+        .popup-details th {
+            background-color: #1a4d3f;
+            font-size: 1.1rem;
+        }
+
+        .popup-details td {
+            font-size: 1rem;
+        }
+
+        /* Animation for fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Styling for list items */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd; /* Add a subtle border between list items */
+    font-size: 1rem;
+    color: #fff; /* White text color to contrast with the green background */
+    transition: background-color 0.3s ease;
+    background-color: #2d6a4f; /* Green background to match the overall theme */
+    border-radius: 5px; /* Slightly rounded corners for the list items */
+}
+
+ul li:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+ul li i {
+    margin-right: 10px;
+    color: #fff; /* White icons to contrast with the background */
+    font-size: 1.2rem; /* Slightly larger icons */
+}
+
+/* Highlighting the price in list */
+ul li.price-highlight {
+    font-weight: bold;
+    color: #FF4500; /* Highlight the price with a different color */
+    font-size: 1.2rem;
+    background-color: #fff7e6; /* Light yellow background to make price stand out */
+    border-radius: 5px;
+    padding: 12px;
+    color: #FF4500; /* Price text color */
+}
+
+   .highlight-price {
+    font-size: 1.5rem; /* Larger font size */
+    font-weight: bold; /* Make the price bold */
+    color: #FFFFFF; /* White text color */
+    background-color: #FF4500; /* Orange-red background for emphasis */
+    padding: 5px 10px; /* Add some space around the price */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}     
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://www.thextruder.com/wp-content/uploads/2023/07/dw.png.webp" alt="TheXtruder Logo">
+    <h1>Business Registration Packages</h1>
+    <a href="https://www.thextruder.com/proposalindex/" class="back-to-home">Back to Home</a>
+</header>
+<section>
+<div class="container">
+  <div class="package-box" id="sole-proprietorship">
+    <i class="fas fa-user"></i>
+    <h3>Sole Proprietorship Registration</h3>
+    <a href="#" onclick="openPopup('sole-proprietorship-popup')">View Packages</a>
+  </div>
+
+<!-- Popup for Sole Proprietorship Registration -->
+<div class="popup" id="sole-proprietorship-popup">
+    <div class="popup-content">
+        <button class="popup-close" onclick="closePopup('sole-proprietorship-popup')">Close</button>
+        <h2><i class="fas fa-user"></i> Sole Proprietorship Registration</h2>
+        <div class="popup-details">
+            <table>
+                <tr>
+                    <th>Details</th>
+                    <td>The firm and its operator are treated as a single entity. The owner is responsible for all profits and losses. Easy setup and minimal requirements.</td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>₹9999</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+  <!-- One Person Company Registration -->
+    <div class="package-box" id="one-person-company">
+        <i class="fas fa-building"></i>
+        <h3>One Person Company Registration</h3>
+        <a href="#" onclick="openPopup('one-person-company-popup')">View Packages</a>
+    </div>
+    <!-- Popup for One Person Company -->
+<div class="popup" id="one-person-company-popup">
+    <div class="popup-content">
+        <button class="popup-close" onclick="closePopup('one-person-company-popup')">Close</button>
+        <h2><i class="fas fa-building"></i> One Person Company Registration</h2>
+        <div class="popup-details">
+            <table>
+                <tr>
+                    <th>Details</th>
+                    <td>Single individual director and member. Liability is limited, and operations are managed by one person.</td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>₹13999</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+  <!-- Partnership Firm Registration -->
+    <div class="package-box" id="partnership-firm">
+        <i class="fas fa-users"></i>
+        <h3>Partnership Firm Registration</h3>
+        <a href="#" onclick="openPopup('partnership-firm-popup')">View Packages</a>
+    </div>
+    <!-- Popup for Partnership Firm -->
+<div class="popup" id="partnership-firm-popup">
+    <div class="popup-content">
+        <button class="popup-close" onclick="closePopup('partnership-firm-popup')">Close</button>
+        <h2><i class="fas fa-users"></i> Partnership Firm Registration</h2>
+        <div class="popup-details">
+            <table>
+                <tr>
+                    <th>Details</th>
+                    <td>Two or more partners, each with specific roles and profit-sharing. Requires a partnership deed.</td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>₹14999</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+  <!-- Limited Liability Partnership Registration -->
+    <div class="package-box" id="llp-registration">
+        <i class="fas fa-cogs"></i>
+        <h3>Limited Liability Partnership (LLP) Registration</h3>
+        <a href="#" onclick="openPopup('llp-registration-popup')">View Packages</a>
+    </div>
+    <!-- Popup for LLP Registration -->
+<div class="popup" id="llp-registration-popup">
+    <div class="popup-content">
+        <button class="popup-close" onclick="closePopup('llp-registration-popup')">Close</button>
+        <h2><i class="fas fa-cogs"></i> LLP Registration</h2>
+        <div class="popup-details">
+            <table>
+                <tr>
+                    <th>Details</th>
+                    <td>Combines benefits of both a partnership and a company. Limited liability and flexibility. Popular for small businesses.</td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>₹14999</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+  <!-- Private Limited Company Registration -->
+    <div class="package-box" id="private-limited-company">
+        <i class="fas fa-industry"></i>
+        <h3>Private Limited Company Registration</h3>
+        <a href="#" onclick="openPopup('private-limited-company-popup')">View Packages</a>
+    </div>
+    <!-- Popup for Private Limited Company -->
+        <div class="popup" id="private-limited-company-popup">
+    <div class="popup-content">
+        <button class="popup-close" onclick="closePopup('private-limited-company-popup')">Close</button>
+        <h2><i class="fas fa-industry"></i> Private Limited Company Registration</h2>
+        
+        <!-- Greeting and Introduction -->
+        <div class="popup-details">
+            <h3>Greetings of the day! Thanks for choosing TheXtruder</h3>
+            <p>We can help you incorporate your company quickly and easily, and the entire process is online. All Our Packages Include Government Fee.</p>
+            
+            <!-- Company Registration Procedure -->
+            <h3>Procedure for Company Registration (Maximum 7 to 18 Days)</h3>
+            <table border="1" cellspacing="0" cellpadding="10" style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <th>Step</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-certificate"></i> Digital Signature</td>
+                    <td>Obtain Digital signature for two Directors (CLASS 3)</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-id-card"></i> DIN Number</td>
+                    <td>Obtain DIN number for all Directors</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-clipboard-check"></i> Company Name Approval</td>
+                    <td>Apply for company name approval</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-file-alt"></i> Filing Documents</td>
+                    <td>Filing of the final documents (Only new forms to speed up the process: E MOA, E AOA)</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-cogs"></i> Incorporation Certificate</td>
+                    <td>Incorporation certificate including PAN and TAN of the company</td>
+                </tr>
+            </table>
+            
+            <!-- Our Other Services Section -->
+            <h3>Our Other Services</h3>
+            <table border="1" cellspacing="0" cellpadding="10" style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <td><i class="fas fa-book"></i></td>
+                    <td>Monthly bookkeeping</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-users"></i></td>
+                    <td>Addition of directors</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-exchange-alt"></i></td>
+                    <td>Transfer of shares</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-briefcase"></i></td>
+                    <td>PF registration</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-hospital-symbol"></i></td>
+                    <td>ESI registration</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-check-square"></i></td>
+                    <td>Verification of software contracts</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-headset"></i></td>
+                    <td>All HR related queries</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-calculator"></i></td>
+                    <td>Payroll process</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-hand-holding-usd"></i></td>
+                    <td>Loan syndication</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-percent"></i></td>
+                    <td>GST registration</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-gavel"></i></td>
+                    <td>Trademark registration</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-cogs"></i></td>
+                    <td>ISO certification</td>
+                </tr>
+            </table>
+            
+            <!-- Charges Section -->
+            <h3>Our Charges:</h3>
+         <p>
+    <strong>For a Private Limited Company with ₹1 Lakh Authorized Capital and ₹1 Lakh Paid-up Capital, our charges are 
+       <br> <br> <span class="highlight-price">₹18999</span>  <br><br>
+        in the state of Kerala (Government fees and Stamp Duty Included). No hidden charges guaranteed.
+    </strong>
+</p>
+
+
+            <!-- Requirements Section -->
+            <h3>Requirements:</h3>
+            <table border="1" cellspacing="0" cellpadding="10" style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <th>DSC Documents</th>
+                    <td>Aadhar, PAN, Email ID, Phone Number, Photo</td>
+                </tr>
+                <tr>
+                    <th>Personal Documents</th>
+                    <td>Bank Statement (Last 30 Days)</td>
+                </tr>
+                <tr>
+                    <th>Office Documents</th>
+                    <td>Rental Agreement, Utility Bill</td>
+                </tr>
+            </table>
+            
+            <!-- Pvt Ltd Company Registration Documents -->
+            <h3>PVT LTD Company Registration Documents</h3>
+            <ul>
+                <li><i class="fas fa-id-card"></i> PAN Card and Aadhar Card of Directors</li>
+                <li><i class="fas fa-envelope"></i> Email ID & Phone Number of Two Directors</li>
+                <li><i class="fas fa-camera"></i> Photo of Each Director</li>
+                <li><i class="fas fa-home"></i> Rental Agreement of Registered Office Address</li>
+                <li><i class="fas fa-lightbulb"></i> Electricity Bill of Registered Office Address</li>
+            </ul>
+            
+            <!-- Deliverables Section -->
+            <h3>Deliverables Along with Company Registration</h3>
+            <ul>
+                <li><i class="fas fa-certificate"></i> Incorporation Certificate</li>
+                <li><i class="fas fa-file-alt"></i> MOA (Memorandum of Association)</li>
+                <li><i class="fas fa-file-alt"></i> AOA (Articles of Association)</li>
+                <li><i class="fas fa-key"></i> Two DSC (Digital Signature Certificates)</li>
+                <li><i class="fas fa-id-card"></i> PAN</li>
+                <li><i class="fas fa-cogs"></i> TAN</li>
+                <li><i class="fas fa-user-cog"></i> PF & ESI Accounts of Company (if required)</li>
+                <li><i class="fas fa-clipboard-check"></i> Board Resolutions for Current Account Opening</li>
+            </ul>
+        <h2><i class="fas fa-calendar-check"></i> Annual Filing & Compliance (After Incorporation)</h2>
+
+<!-- Greeting and Introduction -->
+<p>Every year, your company must file several compliance documents. Here's what needs to be filed:</p>
+
+<!-- Table for Filing Details -->
+<table border="1" cellspacing="0" cellpadding="10" style="width: 100%; border-collapse: collapse;">
+    <tr>
+        <th>Document</th>
+        <th>Details</th>
+        <th>Cost</th>
+        <th>Deadline</th>
+    </tr>
+    <tr>
+        <td><i class="fas fa-file"></i> INC 20 A</td>
+        <td>Filing for company commencement with government</td>
+        <td>₹4500</td>
+        <td>180 Days from Incorporation</td>
+    </tr>
+    <tr>
+        <td><i class="fas fa-user-check"></i> KYC</td>
+        <td>Know Your Customer for Directors and Shareholders</td>
+        <td>₹2500 per head</td>
+        <td>September 30</td>
+    </tr>
+    <tr>
+        <td><i class="fas fa-file-invoice"></i> ITR (Income Tax Return)</td>
+        <td>Starting from ₹20k to ₹45k depending on the size</td>
+        <td>₹20,000 to ₹45,000</td>
+        <td>By September 30</td>
+    </tr>
+</table>
+
+<h3>Services You Need To Cover  for Financial Year 2024-25:</h3>
+
+<!-- Unordered List for Services -->
+<ul>
+    <li><i class="fas fa-file-signature"></i> Preparation & Filing of Form ADT-01 (Auditor Appointment)</li>
+    <li><i class="fas fa-balance-scale"></i> Preparation of Balance Sheet, P&L Accounts, Audit Report, Director's Report, Extract of Annual Returns & Financial Statements</li>
+    <li><i class="fas fa-file-alt"></i> Preparation & Filing of Form AOC-4 (Financials Related Annual Return)</li>
+    <li><i class="fas fa-file-alt"></i> Preparation & Filing of Form MGT-7 (Management Related Annual Return)</li>
+    <li><i class="fas fa-calendar-day"></i> Preparation of 04 Minutes of Board Meeting</li>
+    <li><i class="fas fa-cogs"></i> Filing of Income Tax Returns (Company)</li>
+</ul>
+
+<h3>DSC Validity:</h3>
+<p>The Digital Signature Certificates (DSC) required for filings are valid for 2 years. Be sure to renew them for continuous compliance.</p>
+
+        </div>
+    </div>
+</div>
+
+</section>
+<footer>
+    <p>&copy; 2025 TheXtruder. All rights reserved.</p>
+</footer>
+
+<script>
+    // Function to open the popup (fullscreen)
+    function openPopup(popupId) {
+        document.getElementById(popupId).style.display = "flex";
+    }
+
+    // Function to close the popup
+    function closePopup(popupId) {
+        document.getElementById(popupId).style.display = "none";
+    }
+</script>
+
+</body>
+</html>
