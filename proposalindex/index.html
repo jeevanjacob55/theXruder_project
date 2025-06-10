@@ -7,121 +7,155 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
 
-        header {
-            background-color: #fff;
-            color: #2d6a4f; /* Green text color */
-            padding: 1rem 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            text-align: center;
-        }
+header {
+    background-color: #ffffff;
+    color: #2d6a4f;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+}
 
-        header img {
-    max-width: 120px;
+header img {
+    max-width: 110px;
     margin-bottom: 10px;
-    display: inline-block;
     float: left;
 }
 
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d6a4f;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 1.5rem;
-            color: #2d6a4f;
-            font-weight: bold;
-        }
+header nav a {
+    text-decoration: none;
+    color: #2d6a4f;
+    margin: 0 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
 
-        header nav {
-            margin-top: 1rem;
-        }
+header nav a:hover {
+    color: #1a4d3f;
+}
 
-        header nav a {
-            text-decoration: none;
-            color: #2d6a4f;
-            margin: 0 1rem;
-            font-weight: bold;
-            font-size: 1rem;
-        }
+.container {
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
 
-        header nav a:hover {
-            color: #1a4d3f;
-        }
+.proposal-box {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 2rem;
+    height: 300px;
+    width: 100%;
+    max-width: 280px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    cursor: pointer;
+    border-top: 4px solid #2d6a4f;
+}
 
-        .container {
-            padding: 3rem 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-            justify-items: center;
-        }
+.proposal-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
 
-        .proposal-box {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 2rem;
-            height: 300px;
-            width: 250px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            cursor: pointer;
-        }
+.proposal-box i {
+    font-size: 3rem;
+    color: #2d6a4f;
+    margin-bottom: 1rem;
+}
 
-        .proposal-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
+.proposal-box h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #2d6a4f;
+}
 
-        .proposal-box i {
-            font-size: 3rem;
-            color: #2d6a4f;
-            margin-bottom: 1rem;
-        }
+.proposal-box a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.95rem;
+    background-color: #2d6a4f;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
-        .proposal-box h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            color: #2d6a4f;
-        }
+.proposal-box a:hover {
+    background-color: #1a4d3f;
+    transform: scale(1.05);
+}
 
-        .proposal-box a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1rem;
-            background-color: #2d6a4f;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
+footer {
+    background-color: #2d6a4f;
+    padding: 1rem 0;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1rem;
+}
 
-        .proposal-box a:hover {
-            background-color: #1a4d3f;
-        }
+/* Section Styling for Future Expansion */
+section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    display: none;
+}
 
-        footer {
-            background-color: #2d6a4f;
-            padding: 1rem 0;
-            color: #fff;
-            text-align: center;
-        }
+section h3 {
+    color: #2d6a4f;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
 
-        footer p {
-            margin: 0;
-            font-size: 1rem;
-        }
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    header img {
+        float: none;
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .proposal-box {
+        height: auto;
+    }
+}
+
     </style>
 </head>
 <body>
