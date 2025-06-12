@@ -441,8 +441,20 @@
             color: #2d6a4f;
             border: 1px solid rgba(45, 106, 79, 0.2);
         }
-          
-        /*  .faq-container {
+           * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
+
+        .faq-container {
             max-width: 1000px;
             margin: 3rem auto;
             padding: 2rem;
@@ -632,6 +644,7 @@
                 padding: 0 1rem 1rem;
             }
         }
+       
 
         /* Staggered animation delays*/
         .table-container:nth-of-type(1) { animation-delay: 0.1s; }
@@ -842,9 +855,9 @@
 		</tr>
 	</tbody>
 </table>
-</section>
+<!-- </section>
 
-<section class="table-container" id="hosting-renewal">
+<section class="table-container" id="hosting-renewal"> -->
 <h2>Hosting Renewal Costs</h2>
 
 <table>
@@ -983,280 +996,255 @@
 <div class="renewal">Renewal Charge: ₹5000</div>
 </div>
 </section>
-
-<section id="faq-container">
+<!-- 
+<section id="faq-container"> -->
 <div class="faq-container">
-<h2>Frequently Asked Questions</h2>
-<!-- FAQ 1 -->
+        <h2>Frequently Asked Questions</h2>
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+            <button class="faq-question">What is professional mail?</button>
+            <div class="faq-answer">
+                <p>Professional mail refers to email services provided under a company's domain (e.g., username@companyname.com). Unlike personal email services like Gmail or Yahoo, professional mail ensures credibility and business professionalism. It is often used for official correspondence, offering features such as higher security, dedicated support, and integration with other business tools like calendars, file storage, and collaboration platforms.</p>
+            </div>
+        </div>
 
-<div class="faq">
-<h3 onclick="toggleAnswer(1)">What is professional mail?</h3>
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+            <button class="faq-question">What is the difference between cPanel webmail vs G Suite vs other?</button>
+            <div class="faq-answer">
+                <p>cPanel webmail is a simple email management tool hosted on the server. It is included with web hosting and typically has basic email functionalities, but lacks advanced features. G Suite (now Google Workspace) offers a complete suite of productivity tools (e.g., Gmail, Drive, Docs) and advanced email services with enhanced security and team collaboration features. Other email services like Microsoft 365 and Zoho offer similar features with varying integrations and pricing.</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Feature</th>
+                            <th>cPanel Webmail</th>
+                            <th>G Suite</th>
+                            <th>Other</th>
+                        </tr>
+                        <tr>
+                            <td>Platform</td>
+                            <td>cPanel Web Hosting</td>
+                            <td>Cloud-based with Google tools</td>
+                            <td>Varies by provider</td>
+                        </tr>
+                        <tr>
+                            <td>Email Features</td>
+                            <td>Basic email services</td>
+                            <td>Advanced security, collaboration tools</td>
+                            <td>Varies by provider</td>
+                        </tr>
+                        <tr>
+                            <td>Storage</td>
+                            <td>Limited to hosting plan</td>
+                            <td>15 GB per user, scalable</td>
+                            <td>Varies</td>
+                        </tr>
+                        <tr>
+                            <td>Support</td>
+                            <td>Host-specific support</td>
+                            <td>24/7 support from Google</td>
+                            <td>Varies by provider</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-<div class="faq-content" id="answer1">
-<p>Professional mail refers to email services provided under a company&rsquo;s domain (e.g., <username>@<companyname>.com). Unlike personal email services like Gmail or Yahoo, professional mail ensures credibility and business professionalism. It is often used for official correspondence, offering features such as higher security, dedicated support, and integration with other business tools like calendars, file storage, and collaboration platforms.</companyname></username></p>
-</div>
-</div>
-<!-- FAQ 2 -->
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+            <button class="faq-question">What is hosting?</button>
+            <div class="faq-answer">
+                <p>Hosting is the service that allows you to store your website's files and data on a server so that people can access them on the internet. There are different types of hosting, such as shared hosting, VPS hosting, and dedicated hosting, each providing varying levels of resources and performance to suit different types of websites and business needs.</p>
+            </div>
+        </div>
 
-<div class="faq">
-<h3 onclick="toggleAnswer(2)">What is the difference between cPanel webmail vs G Suite vs other?</h3>
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+            <button class="faq-question">What is a domain?</button>
+            <div class="faq-answer">
+                <p>A domain is the address used to access a website on the internet, such as "example.com." It is composed of two parts: the domain name (e.g., example) and the top-level domain (TLD) like .com, .org, or a country-specific TLD like .in. A domain name is typically registered with a domain registrar.</p>
+            </div>
+        </div>
 
-<div class="faq-content" id="answer2">
-<p>cPanel webmail is a simple email management tool hosted on the server. It is included with web hosting and typically has basic email functionalities, but lacks advanced features. G Suite (now Google Workspace) offers a complete suite of productivity tools (e.g., Gmail, Drive, Docs) and advanced email services with enhanced security and team collaboration features. Other email services like Microsoft 365 and Zoho offer similar features with varying integrations and pricing.</p>
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+            <button class="faq-question">What is a domain TLD?</button>
+            <div class="faq-answer">
+                <p>A TLD (Top-Level Domain) is the last part of a domain name that follows the final dot, such as .com, .org, or country-specific extensions like .us, .ca, or .in. TLDs categorize domains by purpose or location and play a key role in domain naming conventions.</p>
+            </div>
+        </div>
 
-<table>
-	<tbody>
-		<tr>
-			<th>Feature</th>
-			<th>cPanel Webmail</th>
-			<th>G Suite</th>
-			<th>Other</th>
-		</tr>
-		<tr>
-			<td>Platform</td>
-			<td>cPanel Web Hosting</td>
-			<td>Cloud-based with Google tools</td>
-			<td>Varies by provider</td>
-		</tr>
-		<tr>
-			<td>Email Features</td>
-			<td>Basic email services</td>
-			<td>Advanced security, collaboration tools</td>
-			<td>Varies by provider</td>
-		</tr>
-		<tr>
-			<td>Storage</td>
-			<td>Limited to hosting plan</td>
-			<td>15 GB per user, scalable</td>
-			<td>Varies</td>
-		</tr>
-		<tr>
-			<td>Support</td>
-			<td>Host-specific support</td>
-			<td>24/7 support from Google</td>
-			<td>Varies by provider</td>
-		</tr>
-	</tbody>
-</table>
-</div>
-</div>
-<!-- FAQ 3 -->
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+            <button class="faq-question">Difference between free theme vs template kit vs Envato licensed theme?</button>
+            <div class="faq-answer">
+                <p>Free themes are often limited in design and customization options, providing basic functionality for users. Template kits, often available for purchase, are pre-built website designs tailored for specific industries or purposes, offering easy-to-use components. Envato licensed themes are premium themes sold on platforms like ThemeForest and provide professional-grade designs, premium features, regular updates, and support.</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Free Theme</th>
+                            <th>Template Kit</th>
+                            <th>Envato Licensed Theme</th>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td>Free</td>
+                            <td>Paid</td>
+                            <td>Paid Premium</td>
+                        </tr>
+                        <tr>
+                            <td>Design Quality</td>
+                            <td>Basic Design</td>
+                            <td>Pre-designed templates</td>
+                            <td>High-quality, professional</td>
+                        </tr>
+                        <tr>
+                            <td>Support</td>
+                            <td>Community</td>
+                            <td>Varies</td>
+                            <td>Dedicated support</td>
+                        </tr>
+                        <tr>
+                            <td>Updates</td>
+                            <td>Rare</td>
+                            <td>Regular</td>
+                            <td>Frequent</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-<div class="faq">
-<h3 onclick="toggleAnswer(3)">What is hosting?</h3>
+        <!-- FAQ 7 -->
+        <div class="faq-item">
+            <button class="faq-question">What is cPanel?</button>
+            <div class="faq-answer">
+                <p>cPanel is a web hosting control panel that provides a graphical interface for managing website hosting services. It allows users to manage domains, emails, files, databases, security, and more. cPanel is commonly used by shared hosting providers to make website management easier for non-technical users.</p>
+            </div>
+        </div>
 
-<div class="faq-content" id="answer3">
-<p>Hosting is the service that allows you to store your website&rsquo;s files and data on a server so that people can access them on the internet. There are different types of hosting, such as shared hosting, VPS hosting, and dedicated hosting, each providing varying levels of resources and performance to suit different types of websites and business needs.</p>
-</div>
-</div>
-<!-- FAQ 4 -->
+        <!-- FAQ 8 -->
+        <div class="faq-item">
+            <button class="faq-question">What is BACKEND ACCESS of WP?</button>
+            <div class="faq-answer">
+                <p>Backend access of WordPress refers to the WordPress admin dashboard where users can manage all aspects of their website. It allows access to settings, plugins, themes, posts, pages, and more. Only authorized users with admin privileges can access this area.</p>
+            </div>
+        </div>
 
-<div class="faq">
-<h3 onclick="toggleAnswer(4)">What is a domain?</h3>
+        <!-- FAQ 9 -->
+        <div class="faq-item">
+            <button class="faq-question">What is WordPress?</button>
+            <div class="faq-answer">
+                <p>WordPress is a content management system (CMS) that allows users to create and manage websites without coding knowledge. It is open-source and comes with a vast range of themes and plugins, allowing users to build everything from blogs to complex business websites.</p>
+            </div>
+        </div>
 
-<div class="faq-content" id="answer4">
-<p>A domain is the address used to access a website on the internet, such as &quot;example.com.&quot; It is composed of two parts: the domain name (e.g., example) and the top-level domain (TLD) like .com, .org, or a country-specific TLD like .in. A domain name is typically registered with a domain registrar.</p>
-</div>
-</div>
-<!-- FAQ 5 -->
+        <!-- FAQ 10 -->
+        <div class="faq-item">
+            <button class="faq-question">What is initial SEO?</button>
+            <div class="faq-answer">
+                <p>Initial SEO (Search Engine Optimization) refers to the foundational steps taken to optimize a website for search engines. This includes keyword research, optimizing page titles, descriptions, URL structure, alt tags for images, and creating a sitemap. Initial SEO aims to make a website more visible in search engine results.</p>
+            </div>
+        </div>
 
-<div class="faq">
-<h3 onclick="toggleAnswer(5)">What is a domain TLD?</h3>
+        <!-- FAQ 11 -->
+        <div class="faq-item">
+            <button class="faq-question">What is an SSL certificate?</button>
+            <div class="faq-answer">
+                <p>An SSL certificate encrypts data exchanged between a website and its users, ensuring that the communication is secure. Websites with SSL certificates display "https" in the URL and a padlock icon, indicating that they are secure and trusted for transactions.</p>
+            </div>
+        </div>
 
-<div class="faq-content" id="answer5">
-<p>A TLD (Top-Level Domain) is the last part of a domain name that follows the final dot, such as .com, .org, or country-specific extensions like .us, .ca, or .in. TLDs categorize domains by purpose or location and play a key role in domain naming conventions.</p>
-</div>
-</div>
-<!-- FAQ 6 -->
+        <!-- FAQ 12 -->
+        <div class="faq-item">
+            <button class="faq-question">What is Bandwidth?</button>
+            <div class="faq-answer">
+                <p>Bandwidth refers to the amount of data that can be transferred between a website and its visitors over a period of time. It determines how much traffic a website can handle and how quickly it can load. Higher bandwidth is necessary for websites with high traffic or rich content like images and videos.</p>
+            </div>
+        </div>
 
-<div class="faq">
-<h3 onclick="toggleAnswer(6)">Difference between free theme vs template kit vs Envato licensed theme?</h3>
+        <!-- FAQ 13 -->
+        <div class="faq-item">
+            <button class="faq-question">What is CDN?</button>
+            <div class="faq-answer">
+                <p>A Content Delivery Network (CDN) is a system of geographically distributed servers that work together to deliver content quickly to users based on their location. CDNs improve website performance by reducing latency and offloading traffic from the main server.</p>
+            </div>
+        </div>
 
-<div class="faq-content" id="answer6">
-<p>Free themes are often limited in design and customization options, providing basic functionality for users. Template kits, often available for purchase, are pre-built website designs tailored for specific industries or purposes, offering easy-to-use components. Envato licensed themes are premium themes sold on platforms like ThemeForest and provide professional-grade designs, premium features, regular updates, and support.</p>
+        <!-- FAQ 14 -->
+        <div class="faq-item">
+            <button class="faq-question">What is a Subdomain?</button>
+            <div class="faq-answer">
+                <p>A subdomain is a domain that is part of a larger domain. For example, blog.example.com is a subdomain of example.com. Subdomains are often used to organize content or separate different sections of a website, like support.example.com or shop.example.com.</p>
+            </div>
+        </div>
 
-<table>
-	<tbody>
-		<tr>
-			<th>Feature</th>
-			<th>Free Theme</th>
-			<th>Template Kit</th>
-			<th>Envato Licensed Theme</th>
-		</tr>
-		<tr>
-			<td>Price</td>
-			<td>Free</td>
-			<td>Paid</td>
-			<td>Paid Premium</td>
-		</tr>
-		<tr>
-			<td>Design Quality</td>
-			<td>Basic Design</td>
-			<td>Pre-designed templates</td>
-			<td>High-quality, professional</td>
-		</tr>
-		<tr>
-			<td>Support</td>
-			<td>Community</td>
-			<td>Varies</td>
-			<td>Dedicated support</td>
-		</tr>
-		<tr>
-			<td>Updates</td>
-			<td>Rare</td>
-			<td>Regular</td>
-			<td>Frequent</td>
-		</tr>
-	</tbody>
-</table>
-</div>
-</div>
-<!-- FAQ 7 -->
+        <!-- FAQ 15 -->
+        <div class="faq-item">
+            <button class="faq-question">Why does Namecheap cost more for NAME CHEAP STELLAR?</button>
+            <div class="faq-answer">
+                <p>Namecheap Stellar is a premium hosting plan offering additional features such as more storage space, faster website performance, unlimited bandwidth, enhanced customer support, and advanced security features. These benefits contribute to a higher price compared to basic hosting packages, ensuring a more professional, reliable, and scalable hosting solution for growing businesses.</p>
+            </div>
+        </div>
 
-<div class="faq">
-<h3 onclick="toggleAnswer(7)">What is cPanel?</h3>
+        <!-- FAQ 16 -->
+        <div class="faq-item">
+            <button class="faq-question">What is a payment gateway?</button>
+            <div class="faq-answer">
+                <p>A payment gateway is a service that authorizes and processes payments for online businesses, ensuring secure transactions between customers and merchants. It acts as an intermediary between the customer's bank and the merchant's account, encrypting sensitive information and ensuring funds are transferred securely. Popular payment gateways include PayPal, Stripe, and Square.</p>
+            </div>
+        </div>
 
-<div class="faq-content" id="answer7">
-<p>cPanel is a web hosting control panel that provides a graphical interface for managing website hosting services. It allows users to manage domains, emails, files, databases, security, and more. cPanel is commonly used by shared hosting providers to make website management easier for non-technical users.</p>
-</div>
-</div>
-<!-- FAQ 8 -->
+        <!-- FAQ 17 -->
+        <div class="faq-item">
+            <button class="faq-question">What is e-commerce?</button>
+            <div class="faq-answer">
+                <p>E-commerce refers to buying and selling goods or services over the internet. It involves online transactions, electronic funds transfers, supply chain management, and online marketing. E-commerce has revolutionized retail by allowing businesses to sell products to global markets, and it encompasses B2B, B2C, C2C, and C2B models.</p>
+            </div>
+        </div>
 
-<div class="faq">
-<h3 onclick="toggleAnswer(8)">What is BACKEND ACCESS of WP?</h3>
+        <!-- FAQ 18 -->
+        <div class="faq-item">
+            <button class="faq-question">Why choose Themeforest WP Licensed Theme?</button>
+            <div class="faq-answer">
+                <p>Choosing an Envato ThemeForest WP licensed theme ensures access to high-quality, professionally designed themes that are regularly updated and supported. These themes offer customization options, compatibility with popular plugins, SEO optimization, and responsive design, making them ideal for building professional and feature-rich websites. Additionally, ThemeForest provides regular updates, bug fixes, and 24/7 support.</p>
+            </div>
+        </div>
 
-<div class="faq-content" id="answer8">
-<p>Backend access of WordPress refers to the WordPress admin dashboard where users can manage all aspects of their website. It allows access to settings, plugins, themes, posts, pages, and more. Only authorized users with admin privileges can access this area.</p>
-</div>
-</div>
-<!-- FAQ 9 -->
+        <!-- FAQ 19 -->
+        <div class="faq-item">
+            <button class="faq-question">What is country-based domain?</button>
+            <div class="faq-answer">
+                <p>A country-based domain, or country-code top-level domain (ccTLD), is a domain extension that is specific to a particular country or geographic region. Examples include .in for India, .ca for Canada, .uk for the United Kingdom, and .de for Germany. These domains help businesses and organizations target local audiences and build credibility within specific regions.</p>
+            </div>
+        </div>
 
-<div class="faq">
-<h3 onclick="toggleAnswer(9)">What is WordPress?</h3>
-
-<div class="faq-content" id="answer9">
-<p>WordPress is a content management system (CMS) that allows users to create and manage websites without coding knowledge. It is open-source and comes with a vast range of themes and plugins, allowing users to build everything from blogs to complex business websites.</p>
-</div>
-</div>
-<!-- FAQ 10 -->
-
-<div class="faq">
-<h3 onclick="toggleAnswer(10)">What is initial SEO?</h3>
-
-<div class="faq-content" id="answer10">
-<p>Initial SEO (Search Engine Optimization) refers to the foundational steps taken to optimize a website for search engines. This includes keyword research, optimizing page titles, descriptions, URL structure, alt tags for images, and creating a sitemap. Initial SEO aims to make a website more visible in search engine results.</p>
-</div>
-</div>
-<!-- FAQ 11 -->
-
-<div class="faq">
-<h3 onclick="toggleAnswer(11)">What is an SSL certificate?</h3>
-
-<div class="faq-content" id="answer11">
-<p>An SSL certificate encrypts data exchanged between a website and its users, ensuring that the communication is secure. Websites with SSL certificates display &quot;https&quot; in the URL and a padlock icon, indicating that they are secure and trusted for transactions.</p>
-</div>
-</div>
-<!-- FAQ 12 -->
-
-<div class="faq">
-<h3 onclick="toggleAnswer(12)">What is Bandwidth?</h3>
-
-<div class="faq-content" id="answer12">
-<p>Bandwidth refers to the amount of data that can be transferred between a website and its visitors over a period of time. It determines how much traffic a website can handle and how quickly it can load. Higher bandwidth is necessary for websites with high traffic or rich content like images and videos.</p>
-</div>
-</div>
-<!-- FAQ 13 -->
-
-<div class="faq">
-<h3 onclick="toggleAnswer(13)">What is CDN?</h3>
-
-<div class="faq-content" id="answer13">
-<p>A Content Delivery Network (CDN) is a system of geographically distributed servers that work together to deliver content quickly to users based on their location. CDNs improve website performance by reducing latency and offloading traffic from the main server.</p>
-</div>
-</div>
-<!-- FAQ 14 -->
-
-<div class="faq">
-<h3 onclick="toggleAnswer(14)">What is a Subdomain?</h3>
-
-<div class="faq-content" id="answer14">
-<p>A subdomain is a domain that is part of a larger domain. For example, blog.example.com is a subdomain of example.com. Subdomains are often used to organize content or separate different sections of a website, like support.example.com or shop.example.com.</p>
-</div>
-</div>
-<!-- FAQ 15 -->
-
-<div class="faq">
-<h3 onclick="toggleAnswer(15)">Why does Namecheap cost more for NAME CHEAP STELLAR?</h3>
-
-<div class="faq-content" id="answer15">
-<p>Namecheap Stellar is a premium hosting plan offering additional features such as more storage space, faster website performance, unlimited bandwidth, enhanced customer support, and advanced security features. These benefits contribute to a higher price compared to basic hosting packages, ensuring a more professional, reliable, and scalable hosting solution for growing businesses.</p>
-</div>
-</div>
-<!-- FAQ 16 -->
-
-<div class="faq">
-<h3 onclick="toggleAnswer(16)">What is a payment gateway?</h3>
-
-<div class="faq-content" id="answer16">
-<p>A payment gateway is a service that authorizes and processes payments for online businesses, ensuring secure transactions between customers and merchants. It acts as an intermediary between the customer&rsquo;s bank and the merchant&rsquo;s account, encrypting sensitive information and ensuring funds are transferred securely. Popular payment gateways include PayPal, Stripe, and Square.</p>
-</div>
-</div>
-<!-- FAQ 17 -->
-
-<div class="faq">
-<h3 onclick="toggleAnswer(17)">What is e-commerce?</h3>
-
-<div class="faq-content" id="answer17">
-<p>E-commerce refers to buying and selling goods or services over the internet. It involves online transactions, electronic funds transfers, supply chain management, and online marketing. E-commerce has revolutionized retail by allowing businesses to sell products to global markets, and it encompasses B2B, B2C, C2C, and C2B models.</p>
-</div>
-</div>
-<!-- FAQ 18 -->
-
-<div class="faq">
-<h3 onclick="toggleAnswer(18)">Why choose Themeforest WP Licensed Theme?</h3>
-
-<div class="faq-content" id="answer18">
-<p>Choosing an Envato ThemeForest WP licensed theme ensures access to high-quality, professionally designed themes that are regularly updated and supported. These themes offer customization options, compatibility with popular plugins, SEO optimization, and responsive design, making them ideal for building professional and feature-rich websites. Additionally, ThemeForest provides regular updates, bug fixes, and 24/7 support.</p>
-</div>
-</div>
-<!-- FAQ 19 -->
-
-<div class="faq">
-<h3 onclick="toggleAnswer(19)">What is country-based domain?</h3>
-
-<div class="faq-content" id="answer19">
-<p>A country-based domain, or country-code top-level domain (ccTLD), is a domain extension that is specific to a particular country or geographic region. Examples include .in for India, .ca for Canada, .uk for the United Kingdom, and .de for Germany. These domains help businesses and organizations target local audiences and build credibility within specific regions.</p>
-</div>
-</div>
-<!-- FAQ 20 -->
-
-<div class="faq">
-<h3 onclick="toggleAnswer(20)">List domain TLD?</h3>
-
-<div class="faq-content" id="answer20">
-<p>There are numerous domain TLDs available, and they can be categorized into several types, including generic TLDs (gTLDs), country-code TLDs (ccTLDs), and new TLDs. Some popular TLDs are:</p>
-
-<ul>
-	<li>.com &ndash; Commercial entities</li>
-	<li>.org &ndash; Nonprofit organizations</li>
-	<li>.net &ndash; Network services</li>
-	<li>.gov &ndash; Government websites</li>
-	<li>.edu &ndash; Educational institutions</li>
-	<li>.in &ndash; India</li>
-	<li>.uk &ndash; United Kingdom</li>
-	<li>.ca &ndash; Canada</li>
-	<li>.au &ndash; Australia</li>
-	<li>.co &ndash; Colombia or company</li>
-	<li>.xyz &ndash; New generic TLD</li>
-	<li>.store &ndash; E-commerce websites</li>
-	<li>.tech &ndash; Technology-related websites</li>
-</ul>
-
-<p>This is just a small selection; there are hundreds of TLDs available for various purposes.</p>
-</div>
-</div>
-</div>
-</section>
+        <!-- FAQ 20 -->
+        <div class="faq-item">
+            <button class="faq-question">List domain TLD?</button>
+            <div class="faq-answer">
+                <p>There are numerous domain TLDs available, and they can be categorized into several types, including generic TLDs (gTLDs), country-code TLDs (ccTLDs), and new TLDs. Some popular TLDs are:</p>
+                <ul>
+                    <li>.com – Commercial entities</li>
+                    <li>.org – Nonprofit organizations</li>
+                    <li>.net – Network services</li>
+                    <li>.gov – Government websites</li>
+                    <li>.edu – Educational institutions</li>
+                    <li>.in – India</li>
+                    <li>.uk – United Kingdom</li>
+                    <li>.ca – Canada</li>
+                    <li>.au – Australia</li>
+                    <li>.co – Colombia or company</li>
+                    <li>.xyz – New generic TLD</li>
+                    <li>.store – E-commerce websites</li>
+                    <li>.tech – Technology-related websites</li>
+                </ul>
+                <p>This is just a small selection; there are hundreds of TLDs available for various purposes.</p>
+            </div>
+        </div>
+    </div>
 </main>
 <script>
 	 
