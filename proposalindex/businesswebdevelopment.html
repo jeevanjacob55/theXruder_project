@@ -768,6 +768,33 @@ tr:last-child td {
         font-size: 1rem;
     }
 }
+/* styles for the footer */
+footer {
+    background: linear-gradient(135deg, #2d3748, #4a5568);
+    padding: 1rem 0;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #2d6a4f, #52b788, #2d6a4f);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
     </style>
 </head>
 <body>
@@ -1246,9 +1273,13 @@ tr:last-child td {
             </div>
         </div>
     </div>
+ 
 
-        
+  
     </main>
+           <footer>
+    <p>&copy; 2025 TheXtruder. All rights reserved.</p>
+</footer>
     <script>
     class FAQAccordion {
             constructor() {

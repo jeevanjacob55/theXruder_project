@@ -858,14 +858,40 @@ tr:last-child td {
         font-size: 1rem;
     }
 }
-   
+   /* styles for the footer */
+   footer {
+    background: linear-gradient(135deg, #2d3748, #4a5568);
+    padding: 1rem 0;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #2d6a4f, #52b788, #2d6a4f);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
  </style>
 </head>
 <body>
 
 <header>
     <!-- <img src="https://www.thextruder.com/wp-content/uploads/2023/07/dw.png.webp" alt="TheXtruder Logo"> -->
-    <h1>Proposal Index</h1>
+    <h1>Digital Marketing</h1>
     <nav>
         <!-- <a href="businesswebdevelopment.html"></a> -->
         
@@ -1051,6 +1077,7 @@ sustainable growth in the dynamic digital landscape
 <footer>
     <p>&copy; 2025 TheXtruder. All rights reserved.</p>
 </footer>
+
 
 </body>
 </html>
